@@ -1,6 +1,6 @@
 cmd = input()
 x, y = 0, 0
-dxs, dys = [-1, 0, 1, 0], [0, 1, 0, -1]
+dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 dir_num = 0
 count = 0
 
@@ -9,12 +9,11 @@ for c in cmd:
     if c == 'F':
         x += dxs[dir_num]
         y += dys[dir_num]
-
         if x == 0 and y == 0:
             break
 
     elif c == 'L':
-        dir_num = (3 - dir_num) % 4
+        dir_num = (dir_num - 1) % 4
 
     elif c == 'R':
         dir_num = (dir_num + 1) % 4
