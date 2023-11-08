@@ -12,11 +12,11 @@ for c in cmd:
 
         if x == 0 and y == 0:
             break
-            
-    if c == 'L':
+
+    elif c == 'L':
         dir_num = (3 - dir_num) % 4
 
-    if c == 'R':
+    elif c == 'R':
         dir_num = (dir_num + 1) % 4
     
 
