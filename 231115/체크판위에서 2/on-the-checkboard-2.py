@@ -15,7 +15,7 @@ while starts:
     y = start[1]
     for i in range(x+1, R):
         for j in range(y+1, C):
-            if arr[x][y] != arr[i][j] and i != R-1 and j != C-1:
+            if arr[x][y] != arr[i][j] and i < R-1 and j < C-1:
                 visited[i][j] = visited[x][y] + 1
                 starts.append([i, j])
             
