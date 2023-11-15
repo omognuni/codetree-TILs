@@ -4,20 +4,22 @@ arr = []
 for _ in range(R):
     arr.append(list(map(str, input().split())))
 
+visited = [[0 for _ in range(R)] for _ in range(C)]
 
-suc = 0
+starts = [[0, 0]]
 
-for i in range(R-1):
-    for j in range(C-1):
-        count = 0
-        x, y = 0, 0
-        for k in range(i+1, R):
-            for l in range(j+1, C):
-                if arr[i][j] != arr[k][l]:
-                    count += 1
-                    x, y = k, l
+ans = 0
+while starts:
+    start = starts.pop()
+    x = start[0]
+    y = start[1]
+    for i in range(x+1, R):
+        for j in range(y+1, C):
+            if arr[x][y] != arr[i][j] and i != R-1 and j != C-1:
+                visited[i][j] = visited[x][y] + 1
+                starts.append([i, j])
+            
+            if i == R-1 and j == C-1 and visited[x][y] == 2:
+                ans += 1
 
-        if count == 2 and x == R - 1 and y == C - 1:
-            suc += 1
-
-print(suc)
+print(ans)
