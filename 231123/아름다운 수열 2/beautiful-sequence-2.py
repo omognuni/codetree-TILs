@@ -13,8 +13,13 @@ for i in range(N-M+1):
         for k in range(M):
             if b[k] == new_arr[j] and not b_visited[k]:
                 b_visited[k]=True
+                break
 
     if False not in b_visited:
         count+=1
 
 print(count)
+
+'''
+
+'''
