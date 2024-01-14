@@ -75,7 +75,7 @@ breads = str(input())
 it = l.begin()
 
 for i in range(n):
-    l.insert(it, breads[i])
+    l.push_back(breads[i])
 
 for j in range(m):
     cmd = input().split()
