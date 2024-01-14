@@ -37,7 +37,12 @@ class DLL:
             temp = self.head          
             temp.next.prev = None          # 새로 head가 될 노드의 prev값을 지워줍니다.
             self.head = temp.next          # head값을 새로 갱신해주고
-            temp.next = None               # 이전 head의 next 값을 지워줍니다.
+            temp.next = None
+            
+        elif node == self.end():
+            node.prev.next = node.next
+            node.prev = None
+            node.next = None
 
         else:                              # head가 삭제되는 것이 아니라면
             node.prev.next = node.next     # 바로 전 노드의 next값을 바꿔주고
