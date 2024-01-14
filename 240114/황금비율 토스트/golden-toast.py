@@ -95,7 +95,7 @@ for j in range(m):
             it = it.prev
 
     if cmd == "R":
-        if it is not None it != l.end():
+        if it is not None and it != l.end():
             it = it.next
 
     if cmd == "P":
