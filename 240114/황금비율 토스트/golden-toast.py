@@ -91,11 +91,11 @@ for j in range(m):
         cmd = cmd[0]
 
     if cmd == "L":
-        if it != l.begin():
+        if it is not None and it != l.begin():
             it = it.prev
 
     if cmd == "R":
-        if it != l.end():
+        if it is not None it != l.end():
             it = it.next
 
     if cmd == "P":
