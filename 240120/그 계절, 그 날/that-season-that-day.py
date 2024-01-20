@@ -9,7 +9,8 @@ def sol():
 
     if Y % 4 == 0:
         if Y % 100 == 0:
-            pass
+            if Y % 400 == 0:
+                leap = True
         else:
             leap = True
 
