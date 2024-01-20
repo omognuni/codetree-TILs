@@ -1,7 +1,6 @@
 def sol():
     Y, M, D = map(int, input().split())
 
-
     days31 = [1, 3, 5, 7, 8, 10, 12]
 
     leap = False
@@ -14,6 +13,9 @@ def sol():
             leap = True
 
     if not leap and (M == 2 and D >= 29):
+        return -1
+
+    if leap and (M==2 and D >= 30):
         return -1
 
     if M not in days31 and D >= 31:
