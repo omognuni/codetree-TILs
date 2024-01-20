@@ -1,7 +1,6 @@
-Y, M, D = map(int, input().split())
-
-
 def sol():
+    Y, M, D = map(int, input().split())
+
 
     days31 = [1, 3, 5, 7, 8, 10, 12]
 
