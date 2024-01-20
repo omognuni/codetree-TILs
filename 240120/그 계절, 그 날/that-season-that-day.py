@@ -9,8 +9,9 @@ def sol():
 
     if Y % 4 == 0:
         if Y % 100 == 0:
-            if Y % 400 == 0:
-                leap = True
+            pass
+        else:
+            leap = True
 
     if not leap and (M == 2 and D == 29):
         return -1
